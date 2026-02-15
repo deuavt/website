@@ -1,0 +1,43 @@
+---
+import Nav from '../components/Nav.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<Nav />
+	<main>
+		<h1 class="title">TUTORING</h1>
+		<hr class="divider">
+
+		<p class="mid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		<div class="row">
+			<p class="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<img class="profile-img" src="/public/filler image.jpg">
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.mid {
+		margin: 0px auto 50px auto;
+		max-width: 40ch;
+		text-align: center;
+	}
+
+	.row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 100px;
+	}
+
+	.profile-img {
+		display: block;
+		width: 15vw;
+		border-radius: 50%;
+		box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+	}
+	.left { justify-self: end; }
+	.left, .right { max-width: 34ch; }
+</style>	

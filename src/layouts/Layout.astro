@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<title>Connor Frisby</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	@font-face {
+		font-family: "Inter";
+		src: url(/fonts/Inter-VariableFont_opsz,wght.ttf);
+		font-style: normal;
+		font-weight: 100 900;
+	}
+	@font-face {
+		font-family: "Inter";
+		src: url("/fonts/Inter-Italic-VariableFont_opsz,wght.ttf");
+		font-style: italic;
+		font-weight: 100 900;
+	}
+	html, body {
+		font-family: "Inter", Arial;
+		letter-spacing: 0.03em;
+	}
+</style>
+
+<style is:global>
+	p {
+		font-size: 1.2rem;
+	}
+	.divider {
+		margin: 20px auto;
+		width: 35vh;
+		border: 0;
+		border-top: 2px solid rgba(0, 0, 0, 0.6);
+	}
+	.title {
+		text-align: center;
+		justify-content: center;
+		margin: 84px auto 24px auto;
+		letter-spacing: 0.1em;
+		color: rgba(0,0,0,0.7);
+	}
+</style>

@@ -1,0 +1,70 @@
+---
+import Nav from '../components/Nav.astro';
+import Layout from '../layouts/Layout.astro';
+
+const socials = [
+	{href: "https://www.google.com", img: "/filler image.jpg"},
+	{href: "https://www.google.com", img: "/filler image.jpg"},
+	{href: "https://www.google.com", img: "/filler image.jpg"},
+	{href: "https://www.google.com", img: "/filler image.jpg"},
+]
+---
+
+<Layout>
+	<Nav />
+	<main>
+		<h1 class="title">ABOUT ME</h1>
+		<hr class="divider">
+		<div class="socials">
+			{socials.map(s => (
+				<a class="social-btn" href={s.href}>
+					<img class="social-icon" src={s.img} />
+				</a>
+			))}
+		</div>
+
+		<section class="row">
+			<div class="left"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+			<div><img class="profile-img" src="/filler image.jpg"></div>
+			<div class="right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.socials {
+		display: flex;
+		margin: 0;
+		gap: 30px;
+		justify-content: center;
+	}
+	.social-btn {
+		width: 30px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		border: 2px solid rgba(0, 0, 0, 0.6);
+		overflow: hidden;
+	}
+	.social-icon {
+		width: 100%;
+		height: 100%;
+	}
+
+	.row {
+		display: grid;
+		grid-template-columns: 1fr 0.5fr 1fr;
+		align-items: center;
+		justify-items: center;
+		gap: 32px;
+	}
+
+	.left { justify-self: end; }
+	.right { justify-self: start; }
+	.left, .right { max-width: 34ch; }
+	.profile-img {
+		display: block;
+		width: 15vw;
+		border-radius: 50%;
+		box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+	}
+</style>	

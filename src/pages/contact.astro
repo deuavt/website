@@ -1,0 +1,99 @@
+---
+import Nav from '../components/Nav.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<Nav />
+	<main>
+		<h1 class="title">CONTACT</h1>
+		<hr class="divider">
+
+		<div class="row">
+			<div class="left">
+				<h2 class="header-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+				<h3 class="header-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<a class="email" href="mailto:email@gmail.com">email@gmail.com</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+			<form class="right">
+				<h1 class="card-title header-main">Contact Me</h1>
+				<label>
+					Name
+					<input type="text" placeholder="Your Name" />
+				</label>
+				<label>
+					Email Address
+					<input type="email" placeholder="your@email.com" />
+				</label>
+				<label>
+					Message
+					<textarea rows="6" placeholder="What can I help you with?"></textarea>
+				</label>
+				<button type="button" disabled>Currently Unavailable; Email Directly</button>
+			</form>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-items: center;
+		gap: 128px;
+	}
+
+	.left {
+		max-width: 20vw;
+		justify-self: end;
+	}
+	.right {
+		margin-top: 40px;
+		max-width: 25vw;
+		justify-self: stretch;
+		border-radius: 14px;
+		padding: 32px;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+		font-family: "Inter";
+	}
+
+	.header-main, .header-sub { font-weight: 500; }
+	.header-main { font-family: "Times New Roman"; }
+	.email {
+		margin: auto 2em;
+		font-size: 1.2rem;
+	}
+
+	.card-title {
+		font-size: 32px;
+		margin: 0 0 20px 0;
+	}
+	label {
+		display: flex;
+		flex-direction: column;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.7);
+		margin: 20px 10px;
+	}
+	input, textarea {
+		margin: 8px 0;
+		padding: 12px;
+		border-radius: 10px;
+		border: 1px solid rgba(0, 0, 0, 0.6);
+		font: inherit;
+		resize: none;
+	}
+	button {
+		display: block;
+		margin: 12px auto;
+		padding: 8px 24px;
+		border-radius: 4px;
+		width: fit-content;
+		border: 1px solid rgba(0, 0, 0, 0.6);
+		background: transparent;
+	}
+	button:hover { background: rgba(0, 0, 0, 0.025); }
+</style>	

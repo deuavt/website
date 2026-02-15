@@ -1,0 +1,55 @@
+---
+import Nav from '../components/Nav.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<Nav />
+	<main>
+		<h3 class="sub-title top">University of Melbourne – BSci (Math & Statistics)</h3>
+		<h1 class="main-title">Connor Frisby</h1>
+		<h3 class="sub-title bottom">Math & CS Student · Private Math Tutor</h3>
+		<section class="buttons">
+			<a class="btn" href="/about">About Me</a>
+			<a class="btn" href="/tutoring">Tutoring</a>
+			<a class="btn" href="/contact">Contact</a>
+		</section>
+	</main>
+</Layout>
+
+<style>	
+	.top {margin: 25vh auto 0;}
+	.bottom {margin: 16px auto;}
+
+	.sub-title {
+		text-align: center;
+		font-size: 20px;
+		letter-spacing: 0.04em;
+		font-weight: 300;
+		color: rgba(0, 0, 0, 0.5)
+	}
+	.main-title {
+		text-align: center;
+		font-family: "Times New Roman";
+		font-size: 40px;
+		letter-spacing: 0.04em;
+		font-weight: 500;
+		margin: 10px auto;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+	}
+	.btn {
+		margin: 12px 12px;
+		padding: 12px 24px;
+		border: 2px solid rgba(0, 0, 0, 0.3);
+		border-radius: 4px;
+		white-space: nowrap;
+		color: inherit;
+		font: inherit;
+		text-decoration: none;
+	}
+</style>	
