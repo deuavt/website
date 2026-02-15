@@ -1,6 +1,6 @@
 <nav>
 	<div class="logo">
-		<h1><a href="/">CONNOR FRISBY</a></h1>
+		<a href="/">CONNOR FRISBY</a>
 	</div>
 	<div class="links">
 		<a href="/">HOME</a>
@@ -11,19 +11,25 @@
 </nav>
 
 <style>
+	.logo a {
+		font-size: 30px;
+		padding: 5%;
+		font-weight: 700;
+		white-space: nowrap;
+	}
 	nav {
-		display : flex;
+		display: flex;
 		justify-content: space-between;
-		padding-left: 12%;
-		padding-right: 12%;
+		padding: 0 12%;
 		align-items: center;
 		position: sticky;
-		width: 76%;
+		width: 100%;
 		z-index: 10;
 		top: 0;
 		color: rgba(0,0,0,0.7);
 		background: rgb(255, 255, 255);
 		box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+		box-sizing: border-box;
 	}
 	nav a {
 		display: inline-block;

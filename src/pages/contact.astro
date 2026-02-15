@@ -11,27 +11,27 @@ import Layout from '../layouts/Layout.astro';
 
 		<div class="row">
 			<div class="left">
-				<h2 class="header-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-				<h3 class="header-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<a class="email" href="mailto:email@gmail.com">email@gmail.com</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<h2 class="header-main">Get In Touch</h2>
+				<h3 class="header-sub">I'd love to hear from you!</h3>
+				<p>If you wish to book a session with me, have any further questions, or just want to chat, please feel free to contact me through email:</p>
+				<a class="email" href="mailto:connorjfrisby@gmail.com">connorjfrisby@gmail.com</a>
+				<p>Text communications are available once tutoring has been arranged.</p>
 			</div>
 			<form class="right">
-				<h1 class="card-title header-main">Contact Me</h1>
+				<h2 class="card-title header-main">Contact Me</h2>
 				<label>
 					Name
-					<input type="text" placeholder="Your Name" />
+					<input name="name" type="text" placeholder="Your Name" />
 				</label>
 				<label>
 					Email Address
-					<input type="email" placeholder="your@email.com" />
+					<input name="email" type="email" placeholder="your@email.com" />
 				</label>
 				<label>
 					Message
-					<textarea rows="6" placeholder="What can I help you with?"></textarea>
+					<textarea name="message" rows="6" placeholder="What can I help you with?"></textarea>
 				</label>
-				<button type="button" disabled>Currently Unavailable; Email Directly</button>
+				<button disabled>Currently Unavailable; Email Directly</button>
 			</form>
 		</div>
 	</main>
@@ -39,9 +39,10 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
 	.row {
+		margin-top: 7.5vh;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		align-items: center;
+		align-items: start;
 		justify-items: center;
 		gap: 128px;
 	}
@@ -51,7 +52,6 @@ import Layout from '../layouts/Layout.astro';
 		justify-self: end;
 	}
 	.right {
-		margin-top: 40px;
 		max-width: 25vw;
 		justify-self: stretch;
 		border-radius: 14px;
@@ -95,5 +95,4 @@ import Layout from '../layouts/Layout.astro';
 		border: 1px solid rgba(0, 0, 0, 0.6);
 		background: transparent;
 	}
-	button:hover { background: rgba(0, 0, 0, 0.025); }
 </style>	

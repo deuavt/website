@@ -9,35 +9,81 @@ import Layout from '../layouts/Layout.astro';
 		<h1 class="title">TUTORING</h1>
 		<hr class="divider">
 
-		<p class="mid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-		<div class="row">
-			<p class="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<img class="profile-img" src="/public/filler image.jpg">
-		</div>
+		<p class="mid">I offer private Mathematics tutoring, specialising in VCE <b>Mathematical Methods</b> and <b>Specialist Mathematics</b>. <br> See my <b>qualifications</b> on my <a href="/about">about me page</a>.</p>
+		<section class="row">
+			<div class="left">
+				<h2 class="col-title">My Goal</h2>
+				<p>The current VCE system does not successfully prepare students for their studies, whether it be</p>
+				<ul>
+					<li>using <b>underdeveloped curricula and textbooks</b>,</li>
+					<li>providing <b>unreliable teachers and materials</b>,</li>
+					<li><b>forcing memorisation</b> in unnecessary situations,</li>
+					<li>setting <b>unreasonable expectations</b> on home study,</li>
+					<li>or never teaching them <b>efficient study techniques</b>.</li>
+				</ul>
+				<p>Thousands of students across Victoria face these issues, left feeling <b>lost and disheartened</b>. My tutoring services aim to combat these issues, by providing quality <b>teaching</b>, realistic <b>study plans</b>, unbiased <b>educational advice</b>, and time-efficient <b>revision techniques</b>.</p>
+			</div>
+			<div class="center">
+				<img class="profile-img" src="/tutoring.jpg" alt="Tutoring" />
+			</div>
+			<div class="right">
+				<h2 class="col-title">Services & Rates</h2>
+				<p>I offer one-on-one online tutoring through Zoom for <b>$50/hr</b>, and <i>(to select students in Melbourne)</i> face-to-face tutoring for <b>$75/hr</b>. Among the services available as your tutor, I can:</p>
+				<ul>
+					<li>Provide quality <b>teaching</b> or <b>revision</b>.</li>
+					<li>Design <b>diagnostic questions</b> to identify knowledge gaps.</li>
+					<li>Develop a targeted plan to bridge <b>missing prerequisites</b>.</li>
+					<li>Produce <b>high-quality</b>
+					<ul>
+						<li>summary notes,</li> 
+						<li>worked solutions,</li> 
+						<li>SAC/exam preparation resources,</li>
+						<li>and personalised study plans,</li>
+					</ul>
+					for no extra charge.
+					</li>
+					<li>Provide <b>experience-based advice</b> on your education.</li>
+				</ul>
+			<p>To schedule a booking or ask a question, please <a href="/contact">contact me</a>.</p>
+			</div>
+		</section>
 	</main>
 </Layout>
 
 <style>
 	.mid {
 		margin: 0px auto 50px auto;
-		max-width: 40ch;
+		max-width: 45ch;
 		text-align: center;
+		color: rgba(0, 0, 0, 0.7);
 	}
 
 	.row {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-items: center;
-		gap: 100px;
+		grid-template-columns: 1fr 0.75fr 1fr;
+		align-items: start;
+		gap: 2.5vh;
+	}
+
+	.col-title {
+		font-family: "Times New Roman";
+		font-weight: 500;
+		font-size: 30px;
 	}
 
 	.profile-img {
 		display: block;
-		width: 15vw;
+		width: 100%;
 		border-radius: 50%;
 		box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 	}
 	.left { justify-self: end; }
-	.left, .right { max-width: 34ch; }
+	.right { justify-self: start; }
+	.center {
+		justify-self: center;
+		align-self: center;
+		transform: translateY(-50px);
+	}
+	.left, .center { max-width: 34ch; }
+	.right { max-width: 44ch; }
 </style>	

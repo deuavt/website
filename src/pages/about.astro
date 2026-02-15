@@ -3,10 +3,9 @@ import Nav from '../components/Nav.astro';
 import Layout from '../layouts/Layout.astro';
 
 const socials = [
-	{href: "https://www.google.com", img: "/filler image.jpg"},
-	{href: "https://www.google.com", img: "/filler image.jpg"},
-	{href: "https://www.google.com", img: "/filler image.jpg"},
-	{href: "https://www.google.com", img: "/filler image.jpg"},
+	{href: "https://github.com/deuavt", img: "/github-icon.png", lbl: "GitHub", trg: "_blank"},
+	{href: "https://www.linkedin.com/in/connorfrisby/", img: "/linkedin-icon.png", lbl: "LinkedIn", trg: "_blank"},
+	{href: "mailto:connorjfrisby@gmail.com", img: "/email-icon.png", lbl: "Email", trg: "_self"}
 ]
 ---
 
@@ -17,16 +16,49 @@ const socials = [
 		<hr class="divider">
 		<div class="socials">
 			{socials.map(s => (
-				<a class="social-btn" href={s.href}>
-					<img class="social-icon" src={s.img} />
+				<a rel="noopener noreferrer" target={s.trg} class="social-btn" href={s.href}>
+					<img class="social-icon" src={s.img} alt={s.lbl} />
 				</a>
 			))}
 		</div>
 
 		<section class="row">
-			<div class="left"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-			<div><img class="profile-img" src="/filler image.jpg"></div>
-			<div class="right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+			<div class="left">
+				<h2 class="col-title">Who Am I?</h2>
+				<p>I am a Bachelor of Science student at the University of Melbourne, majoring in <b>Mathematics and Statistics</b>, alongside a concurrent <b>Diploma in Computing</b>.</p>
+				<p>I love studying <b>mathematics</b> and <b>programming</b> in my free time, with <b>5+ years</b> of experience in programming, mastering <b>Python</b> as my primary language.</p>
+				<p>Throughout VCE, I studied <b>General, Methods, and Specialist Mathematics</b>, experiencing their various <b>terrible curricula</b>. From then on, I decided to start my own tutoring service, prioritising what really helps students succeed in mathematics.</p>      
+			</div>
+			<div class="center">
+				<h2 class="col-title">Tutoring</h2>
+				<p>I provide one-on-one private Mathematics tutoring to high school students, specialising in VCE <b>Maths Methods</b> and <b>Specialist Maths</b>.</p>
+				<p>I operate online over Zoom <i>(or face-to-face for select students)</i>, and have tutored for <b>2+ years</b>, teaching nearly every year level, and gathering <b>240+ hours</b> of experience to date.</p>
+				<p>My teaching style <b>prioritises fundamentals</b>, rather than blunt memorisation, and <b>optimises home study</b>, rather than long time-wasting sessions.</p>
+				<p>For more details visit my <a href="/tutoring">tutoring page</a>.</p>
+			</div>
+			<div class="right">
+				<h2 class="col-title">Credentials</h2>
+				<p>My formal credentials include:</p>
+				<p>My <b>VCE</b> results:</p>
+				<ul>
+					<li><i>ATAR:</i> 98.15</li>
+					<li>Raw Study Scores:
+					<ul>
+						<li><i>Maths Methods:</i> 44 (94%)</li>
+						<li><i>Specialist Maths:</i> 38 (93%)</li>
+						<li><i>General Maths</i>: 44 (94%)</li>
+					</ul>
+					</li>
+				</ul>
+				<p>My <b><a rel="noopener noreferrer" target="_blank" href="https://study.unimelb.edu.au/connect-with-us/high-school-programs/university-of-melbourne-extension-program">UMEP (University) Mathematics</a></b> results, where I studied 2 university subjects concurrent to VCE:</p>
+				<ul>
+					<li><i><a rel="noopener noreferrer" target="_blank" href="https://study.unimelb.edu.au/connect-with-us/high-school-programs/university-of-melbourne-extension-program/what-UMEP-offers/atar-contribution">Equivalent Study Score:</a></i> 50</li>
+					<li><i>Linear Algebra:</i> 94%</li>
+					<li><i>Calculus 2:</i> 97%</li>
+				</ul>
+				<p>I received the <b><a rel="noopener noreferrer" target="_blank" href="https://www2.adffutureinnovators.adfcareers.gov.au/schools/AwardsInformationSTEM.aspx">Year 12 ADF Future Innovators Award</a></b>.</p>
+				<p>For more details visit my <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/connorfrisby/">LinkedIn</a>.</p>
+			</div>
 		</section>
 	</main>
 </Layout>
@@ -34,37 +66,40 @@ const socials = [
 <style>
 	.socials {
 		display: flex;
-		margin: 0;
+		margin: 0 0 4vh;
 		gap: 30px;
 		justify-content: center;
 	}
 	.social-btn {
+		display: inline-block;
 		width: 30px;
 		aspect-ratio: 1;
 		border-radius: 50%;
-		border: 2px solid rgba(0, 0, 0, 0.6);
 		overflow: hidden;
 	}
 	.social-icon {
 		width: 100%;
 		height: 100%;
+		filter: grayscale(1) contrast(100) brightness(1);
+		opacity: 0.7;
 	}
 
 	.row {
 		display: grid;
-		grid-template-columns: 1fr 0.5fr 1fr;
-		align-items: center;
-		justify-items: center;
-		gap: 32px;
+		grid-template-columns: 1fr 0.75fr 1fr;
+		align-items: start;
+		gap: 10px;
+	}
+
+	.col-title {
+		font-family: "Times New Roman";
+		font-weight: 500;
+		font-size: 30px;
 	}
 
 	.left { justify-self: end; }
 	.right { justify-self: start; }
-	.left, .right { max-width: 34ch; }
-	.profile-img {
-		display: block;
-		width: 15vw;
-		border-radius: 50%;
-		box-shadow: 0 3px 5px rgba(0,0,0,0.3);
-	}
+	.center {justify-self: center;}
+	.left, .center { max-width: 34ch; }
+	.right { max-width: 44ch; }
 </style>	
