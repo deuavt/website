@@ -12,14 +12,18 @@
 
 <style>
 	.logo a {
-		font-size: 30px;
-		padding: 5%;
+		font-size: clamp(1rem, 3vh, 3rem);
 		font-weight: 700;
 		white-space: nowrap;
 	}
+	.links a {
+		font-size: clamp(0.75rem, 2.25vh, 2rem);
+	}
 	nav {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: 6vw;
 		padding: 0 12%;
 		align-items: center;
 		position: sticky;
@@ -34,18 +38,19 @@
 	nav a {
 		display: inline-block;
 		color: inherit;
-		font-size: 1.5rem;
 		text-decoration: none;
-	}
-	h1 a {
-		font-size: inherit;
 	}
 	.links {
 		display : flex;
-		gap: 5rem;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 6vw;
 	}
 	.logo {
 		letter-spacing: 0.3em;
 		color: rgba(0,0,0,0.7);
 	}
+	.logo a, .links {
+		padding: 2.5vh;
+	} 
 </style>
