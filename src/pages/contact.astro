@@ -31,7 +31,7 @@ import Layout from '../layouts/Layout.astro';
 					Message
 					<textarea name="message" rows="6" placeholder="What can I help you with?"></textarea>
 				</label>
-				<button disabled>Currently Unavailable; Email Directly</button>
+				<button type="button" onclick="handleSubmit()">Create Email</button>
 			</form>
 		</div>
 	</main>
@@ -94,6 +94,18 @@ import Layout from '../layouts/Layout.astro';
 		border: 0.05vw solid rgba(0, 0, 0, 0.6);
 		background: transparent;
 		font-size: inherit;
+		cursor: pointer;
 	}
 </style>	
+
+<script>
+  function handleSubmit() {
+    const name = (document.querySelector('[name="name"]') as HTMLInputElement).value;
+    const email = (document.querySelector('[name="email"]') as HTMLInputElement).value;
+    const message = (document.querySelector('[name="message"]') as HTMLTextAreaElement).value;
+    const body = `Contact Me At: ${email}\n\n${message}`;
+    window.location.href = `mailto:connorjfrisby@gmail.com?subject=${encodeURIComponent(`${name}'s Tutoring Enquiry`)}&body=${encodeURIComponent(body)}`;
+  }
+  (window as any).handleSubmit = handleSubmit;
+</script>	
 <!-- clamp, fix button & other shit, fix things being too big -->
