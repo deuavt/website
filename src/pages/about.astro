@@ -25,38 +25,50 @@ const socials = [
 		<section class="row">
 			<div class="left">
 				<h2 class="col-title">Who Am I?</h2>
-				<p>I am a Bachelor of Science student at the University of Melbourne, majoring in <b>Mathematics and Statistics</b>, alongside a concurrent <b>Diploma in Computing</b>.</p>
-				<p>I love studying <b>mathematics</b> and <b>programming</b> in my free time, with <b>5+ years</b> of experience in programming, mastering <b>Python</b> as my primary language.</p>
-				<p>Throughout VCE, I studied <b>General, Methods, and Specialist Mathematics</b>, experiencing their various <b>terrible curricula</b>. From then on, I decided to start my own tutoring service, prioritising what really helps students succeed in mathematics.</p>      
-			</div>
-			<div class="center">
-				<h2 class="col-title">Tutoring</h2>
-				<p>I provide one-on-one private Mathematics tutoring to high school students, specialising in VCE <b>Maths Methods</b> and <b>Specialist Maths</b>.</p>
-				<p>I operate online over Zoom <i>(or face-to-face for select students)</i>, and have tutored for <b>2+ years</b>, teaching nearly every year level, and gathering <b>240+ hours</b> of experience to date.</p>
-				<p>My teaching style <b>prioritises fundamentals</b>, rather than blunt memorisation, and <b>optimises home study</b>, rather than long time-wasting sessions.</p>
-				<p>For more details visit my <a href="/tutoring">tutoring page</a>.</p>
+				<p>I am a Bachelor of Science student at the <b>University of Melbourne</b>, majoring in <b>Mathematics and Statistics</b>.</p>
+				<p>I love studying mathematics and programming in my free time, with <b>5+ years</b> of experience in programming, mastering <b>Python</b> as my primary language.</p>
+				<p>Throughout VCE, I studied:
+				<ul>
+					<li>Specialist Maths</li>
+					<li>Methods Maths</li>
+					<li>General Maths</li>
+					<li>Physics</li>
+					<li>Applied Computing: Software Development</li>
+					<li>English Language</li>
+				</ul> 
+				<p>I also completed <b><a rel="noopener noreferrer" target="_blank" href="https://study.unimelb.edu.au/connect-with-us/high-school-programs/university-of-melbourne-extension-program">UMEP Mathematics</a></b>, where I studied two University of Melbourne subjects concurrent to VCE.</p>
+				<p>I now provide one-on-one private Mathematics tutoring to high school students. For more details visit my <a href="/tutoring">tutoring page</a>.</p>
 			</div>
 			<div class="right">
 				<h2 class="col-title">Credentials</h2>
-				<p>My formal credentials include:</p>
-				<p>My <b>VCE</b> results:</p>
+				<p><b>VCE results:</b></p>
 				<ul>
-					<li><i>ATAR:</i> 98.15</li>
-					<li>Raw Study Scores (and avg Y12 results):
-					<ul>
-						<li><i>Maths Methods:</i> 44 (94%)</li>
-						<li><i>Specialist Maths:</i> 38 (93%)</li>
-						<li><i>General Maths</i>: 44 (94%)</li>
-					</ul>
+					<li><i><b>ATAR:</b></i> 98.15</li>
+					<li><i><b>Study Scores</b></i>:
+					<table>
+					<thead>
+						<tr>
+						<th>Subject</th>
+						<th>Raw Score</th>
+						<th>Scaled Score</th>
+						<th>Year 12 Avg Grade</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td><i>Maths Methods</i></td><td>44</td><td>48</td><td>94%</td></tr>
+						<tr><td><i>Specialist Maths</i></td><td>38</td><td>50</td><td>93%</td></tr>
+						<tr><td><i>General Maths</i></td><td>44</td><td>43</td><td>94%</td></tr>
+					</tbody>
+					</table>
 					</li>
 				</ul>
-				<p>My <b><a rel="noopener noreferrer" target="_blank" href="https://study.unimelb.edu.au/connect-with-us/high-school-programs/university-of-melbourne-extension-program">UMEP (University) Mathematics</a></b> results, where I studied 2 university subjects concurrent to VCE:</p>
+				<b>UMEP Results:</b>
 				<ul>
 					<li><i><a rel="noopener noreferrer" target="_blank" href="https://study.unimelb.edu.au/connect-with-us/high-school-programs/university-of-melbourne-extension-program/what-UMEP-offers/atar-contribution">Equivalent Study Score:</a></i> 50</li>
 					<li><i>Linear Algebra:</i> 94%</li>
 					<li><i>Calculus 2:</i> 97%</li>
 				</ul>
-				<p>I received the <b><a rel="noopener noreferrer" target="_blank" href="https://www2.adffutureinnovators.adfcareers.gov.au/schools/AwardsInformationSTEM.aspx">Year 12 ADF Future Innovators Award</a></b>.</p>
+				<p>I also received the <b><a rel="noopener noreferrer" target="_blank" href="https://www2.adffutureinnovators.adfcareers.gov.au/schools/AwardsInformationSTEM.aspx">Year 12 ADF Future Innovators Award</a></b>.</p>
 				<p>For more details visit my <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/connorfrisby/">LinkedIn</a>.</p>
 			</div>
 		</section>
@@ -64,6 +76,15 @@ const socials = [
 </Layout>
 
 <style>
+	table { 
+		border-collapse: collapse; 
+		margin: 24px 12px;
+	}
+	th, td { border: 1px solid; padding: 4px 8px; }
+	th:nth-child(2), td:nth-child(2) { width: 20px; }
+	th:nth-child(3), td:nth-child(3) { width: 20px; }
+	th:nth-child(4), td:nth-child(4) { width: 100px; }
+
 	.socials {
 		display: flex;
 		margin: 0 0 4vh;
@@ -86,9 +107,9 @@ const socials = [
 
 	.row {
 		display: grid;
-		grid-template-columns: 1fr 0.75fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		align-items: start;
-		gap: 1vw;
+		gap: 5vw;
 		padding: 0 5vw;
 	}
 
@@ -101,6 +122,6 @@ const socials = [
 	.left { justify-self: end; }
 	.right { justify-self: start; }
 	.center {justify-self: center;}
-	.left, .center { max-width: 34ch; }
-	.right { max-width: 44ch; }
+	.left { max-width: 50ch; }
+	.right { max-width: 54ch; }
 </style>	

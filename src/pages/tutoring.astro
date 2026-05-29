@@ -13,6 +13,13 @@ import Layout from '../layouts/Layout.astro';
 		<p class="mid"><br> See my qualifications on my <a href="/about">about me page</a>.</p>
 		<section class="row">
 			<div class="left">
+				<h2 class="col-title">Tutoring</h2>
+				<p>I provide one-on-one private Mathematics tutoring to high school students, specialising in VCE <b>Maths Methods</b> and <b>Specialist Maths</b>.</p>
+				<p>I operate online over Zoom <i>(or face-to-face for select students)</i>, and have tutored for <b>2+ years</b>, teaching nearly every year level, and gathering <b>240+ hours</b> of experience to date.</p>
+				<p>My teaching style <b>prioritises fundamentals</b>, rather than blunt memorisation, and <b>optimises home study</b>, rather than long time-wasting sessions.</p>
+				<p>For more details visit my <a href="/tutoring">tutoring page</a>.</p>
+			</div>
+			<div class="center">
 				<img class="profile-img" src="/tutoring.jpg" alt="Tutoring" />
 			</div>
 			<div class="right">
@@ -21,14 +28,14 @@ import Layout from '../layouts/Layout.astro';
 				
 				<p>Within my services, I provide:</p>
 				<ul>
-					<li>Teaching & revision.</li>
-					<li>Diagnostic questions.</li>
-					<li>Prerequisite bridging.</li>
-					<li>Subject notes.</li> 
-					<li>Worked solutions.</li> 
-					<li>SAC/exam preparation resources.</li>
-					<li>Personalised study plans.</li>
-					<li>Education advice.</li>
+					<li>Teaching & revision</li>
+					<li>Diagnostic questions</li>
+					<li>Prerequisite bridging</li>
+					<li>Subject notes</li> 
+					<li>Worked solutions</li> 
+					<li>SAC/exam preparation resources</li>
+					<li>Personalised study plans</li>
+					<li>Education advice</li>
 				</ul>
 			<p>To schedule a booking or ask a question, please <a href="/contact">contact me</a>.</p>
 			</div>
@@ -46,10 +53,10 @@ import Layout from '../layouts/Layout.astro';
 
 	.row {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 0.75fr 1fr;
 		margin: 50px 0px;
 		align-items: start;
-		gap: 10vh;
+		gap: 2.5vh;
 	}
 
 	.col-title {
@@ -66,6 +73,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 	.left { justify-self: end; }
 	.right { justify-self: start; }
+	.center {justify-self: center;}
 	.left, .center { max-width: 34ch; }
 	.right { max-width: 44ch; }
 </style>	
