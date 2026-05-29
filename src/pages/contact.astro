@@ -44,7 +44,7 @@ import Layout from '../layouts/Layout.astro';
 		grid-template-columns: 1fr 1fr;
 		align-items: start;
 		justify-items: center;
-		gap: 128px;
+		gap: 7.5vw;
 	}
 
 	.left {
@@ -55,44 +55,45 @@ import Layout from '../layouts/Layout.astro';
 		max-width: 25vw;
 		justify-self: stretch;
 		border-radius: 14px;
-		padding: 32px;
-		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+		padding: 2vw;
+		box-shadow: 0 0.05vw 0.3vw rgba(0, 0, 0, 0.5);
 		font-family: "Inter";
 	}
 
 	.header-main, .header-sub { font-weight: 500; }
 	.header-main { font-family: "Times New Roman"; }
 	.email {
-		margin: auto 2em;
-		font-size: 1.2rem;
+		margin: auto 3vh;
 	}
 
 	.card-title {
-		font-size: 32px;
-		margin: 0 0 20px 0;
+		font-size: 1.8vw;
+		margin: 0 0 2vw 0;
 	}
 	label {
 		display: flex;
 		flex-direction: column;
-		font-size: 16px;
+		font-size: 1vw;
 		color: rgba(0, 0, 0, 0.7);
-		margin: 20px 10px;
+		margin: 1.5vh 0;
 	}
 	input, textarea {
-		margin: 8px 0;
-		padding: 12px;
+		margin: 1vh 0;
+		padding: 0.75vw;
 		border-radius: 10px;
-		border: 1px solid rgba(0, 0, 0, 0.6);
+		border: 0.05vw solid rgba(0, 0, 0, 0.6);
 		font: inherit;
 		resize: none;
 	}
 	button {
 		display: block;
-		margin: 12px auto;
-		padding: 8px 24px;
+		margin: 0 auto;
+		padding: 1vh 1vw;
 		border-radius: 4px;
 		width: fit-content;
-		border: 1px solid rgba(0, 0, 0, 0.6);
+		border: 0.05vw solid rgba(0, 0, 0, 0.6);
 		background: transparent;
+		font-size: inherit;
 	}
 </style>	
+<!-- clamp, fix button & other shit, fix things being too big -->

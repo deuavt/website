@@ -42,7 +42,7 @@ const socials = [
 				<p>My <b>VCE</b> results:</p>
 				<ul>
 					<li><i>ATAR:</i> 98.15</li>
-					<li>Raw Study Scores:
+					<li>Raw Study Scores (and avg Y12 results):
 					<ul>
 						<li><i>Maths Methods:</i> 44 (94%)</li>
 						<li><i>Specialist Maths:</i> 38 (93%)</li>
@@ -67,12 +67,12 @@ const socials = [
 	.socials {
 		display: flex;
 		margin: 0 0 4vh;
-		gap: 30px;
+		gap: 2vw;
 		justify-content: center;
 	}
 	.social-btn {
 		display: inline-block;
-		width: 30px;
+		width: clamp(16px, 1.9vw, 52px);
 		aspect-ratio: 1;
 		border-radius: 50%;
 		overflow: hidden;
@@ -88,13 +88,14 @@ const socials = [
 		display: grid;
 		grid-template-columns: 1fr 0.75fr 1fr;
 		align-items: start;
-		gap: 10px;
+		gap: 1vw;
+		padding: 0 5vw;
 	}
 
 	.col-title {
 		font-family: "Times New Roman";
 		font-weight: 500;
-		font-size: 30px;
+		font-size: clamp(1rem, 1.75vw, 3rem);
 	}
 
 	.left { justify-self: end; }

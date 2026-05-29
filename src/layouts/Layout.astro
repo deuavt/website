@@ -32,18 +32,22 @@
 </style>
 
 <style is:global>
+	main {
+		padding-bottom: 20vh;
+	}
 	a { color: inherit; }
-	p { font-size: 1.05rem; }
+	p, li, ul, a { font-size: clamp(0.55rem, 1vw, 1.55rem); }
 	.divider {
-		margin: 20px auto;
+		margin: 2.5vh auto;
 		width: 20vw;
 		border: 0;
 		border-top: 2px solid rgba(0, 0, 0, 0.6);
 	}
 	.title {
 		text-align: center;
-		margin: 84px auto 24px auto;
-		letter-spacing: 0.1em;
+		margin: 10vh auto 2.5vh auto;
+		font-size: clamp(1.25rem, 2vw, 3rem);
+		letter-spacing: 0.2vw;
 		color: rgba(0,0,0,0.7);
 	}
 </style>
